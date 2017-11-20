@@ -19,11 +19,28 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+
+  database: blogaqp_development
+  username: postgres
+  port: 5433
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: blogaqp_development
+  #<<: *default
+
+    adapter: postgresql
+    encoding: unicode
+    database: blogaqp_development
+    username: postgres
+    #password: alonsoucsm
+    #host: localhost
+    port: 5433
+    #pool: 5
+
+
+
+
+#  database: blogaqp_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
