@@ -21,7 +21,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
 
 #  database: blogaqp_development
-  username: postgres
+#  username: postgres
 #  port: 5432
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
@@ -97,6 +97,6 @@ test:
 #
 production:
   <<: *default
-  database: blogaqp_production
-  username: blogaqp
-  password: <%= ENV['BLOGAQP_DATABASE_PASSWORD'] %>
+#  database: blogaqp_production
+#  username: blogaqp
+#  password: <%= ENV['BLOGAQP_DATABASE_PASSWORD'] %>

@@ -28,9 +28,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt', '~> 3.1.7'
 #gem 'bcrypt', '~> 3.1.11'
-#gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
@@ -40,6 +40,7 @@ gem 'rails_admin', '~> 1.2'
 gem 'ckeditor'
 
 gem 'carrierwave'
+gem "mini_magick"
 gem 'cloudinary'
 gem 'will_paginate', '~> 3.1.0'
 
@@ -63,3 +64,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby "2.3.3"
