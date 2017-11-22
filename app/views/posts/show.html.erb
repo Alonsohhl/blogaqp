@@ -1,7 +1,41 @@
 <% provide(:page_title,@post.title) %>
 
-<p id="notice"><%= notice %></p>
-<%= @post.title %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-lg-8">
+
+          <!-- Title -->
+          <h1 class="mt-4"><%= @post.title %></h1>
+
+          <!-- Author -->
+          <p class="lead">
+            Por:
+            <a href="#">Blog AQP</a>
+          </p>
+
+          <hr>
+
+          <!-- Date/Time -->
+          <p>Posted on January 1, 2017 at 12:00 PM</p>
+
+          <hr>
+
+          <!-- Preview Image -->
+          <%= cl_image_tag(@post.imagen,:class =>"img-fluid rounded", :alt => @post.title,:width=>900, :height=>300, :crop=>"scale")%>
+
+          <hr>
+
+          <!-- Post Content -->
+          <%= @post.body.html_safe %>
+
+
+
+        </div>
+  </div>
+</div>
+
+<!-- <%= @post.title %>
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
@@ -23,4 +57,4 @@
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %> -->

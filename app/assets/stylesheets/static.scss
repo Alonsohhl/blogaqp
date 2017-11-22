@@ -16,7 +16,7 @@
 
  body {
    //padding-top: 3rem;
-   padding-bottom: 3rem;
+   padding-bottom: 0;
    color: #5a5a5a;
  }
  .blackout {
@@ -222,4 +222,7 @@ align-items: center !important;
     -webkit-font-stretch: condensed;
     font-stretch: condensed;
     color: black;
+}
+.footer{
+  background: black;
 }

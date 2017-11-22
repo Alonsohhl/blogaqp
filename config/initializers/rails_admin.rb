@@ -12,7 +12,7 @@ RailsAdmin.config do |config|
     edit do
       # For RailsAdmin >= 0.5.0
       field :title
-      field :description, :ck_editor
+      field :body, :ck_editor
       field :imagen
       # For RailsAdmin < 0.5.0
       # field :description do
