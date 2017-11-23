@@ -9,6 +9,8 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
 
+      <%= cl_image_tag(@posts.first.imagen,:class =>"first-slide", :alt => "Sample Image")%>
+
       <div class="container">
         <div class="carousel-caption text-left">
           <h1>Example headline.</h1>
@@ -61,25 +63,27 @@
 
   <div class="row align-middle">
     <a href="" class="col-sm-6 col-lg-3 image-r text-center ">
-      <%= image_tag("aqp2.png" , class: "img-fluid") %>
+
+      <%= image_tag("cat_post/aqp1.png" , class: "img-fluid", size: "275x200") %>
       <div class="captionn">
         HOY
       </div>
     </a>
     <a href="" class="col-sm-6 col-lg-3 image-r text-center ">
-      <%= image_tag("aqp2.png" , class: "img-fluid") %>
+      <!-- <img src="http://res.cloudinary.com/dehhkgwah/image/upload/c_thumb,h_200,w_275/v1511390410/aqp3_m96c2e.jpg" alt="Arequipa Eventos hoy",class= "img-fluid"> -->
+      <%= image_tag("cat_post/aqp2.png" , class: "img-fluid", size: "275x200") %>
       <div class="captionn">
         ESTE FIN
       </div>
     </a>
     <a href="" class="col-sm-6 col-lg-3 image-r text-center ">
-      <%= image_tag("aqp2.png" , class: "img-fluid") %>
+      <%= image_tag("cat_post/aqp3.png" , class: "img-fluid", size: "275x200") %>
       <div class="captionn">
         ESTA SEMANA
       </div>
     </a>
     <a href="" class="col-sm-6 col-lg-3 image-r text-center ">
-      <%= image_tag("aqp2.png" , class: "img-fluid") %>
+      <%= image_tag("cat_post/aqp4.png" , class: "img-fluid", size: "275x200") %>
       <div class="captionn">
         ESTE MES
       </div>
@@ -101,11 +105,15 @@
 
           <% @posts.each do |post| %>
           <div class="card mb-4">
-            <%= cl_image_tag(post.imagen,:class =>"card-img-top", :alt => "Sample Image",:width=>700, :height=>300, :crop=>"scale")%>
+            <%= cl_image_tag(post.imagen,:class =>"card-img-top", :alt => "Sample Image",:width=>900, :height=>300, :crop=>"scale")%>
             <!-- <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap"> -->
             <div class="card-body">
               <h2 class="card-title"><%= post.title %></h2>
-              <p class="card-text"><%= post.body %></p>
+              <p class="card-text">
+                <% if !post.body.blank? %>  
+                <%=  truncate(post.body.html_safe, :length => 200, :omission => "" , :escape => false) %>
+                <% end %>
+              </p>
               <%= link_to 'Leer Mas ->', post ,class: "btn btn-outline-primary"%>
 
               <!-- <a href=post class="btn btn-primary">Leer Mas &rarr;</a>
@@ -116,7 +124,6 @@
               <a href="#">Blog Aqp</a>
             </div>
           </div>
-
 
 
           <% end %>
