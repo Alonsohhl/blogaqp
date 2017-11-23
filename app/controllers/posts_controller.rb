@@ -5,7 +5,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     #@slides = Post.all
-    @posts = Post.paginate(:page => params[:page], :per_page => 3)
+    @slider = Post.where(:slider => true)
+    @posts = Post.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /posts/1

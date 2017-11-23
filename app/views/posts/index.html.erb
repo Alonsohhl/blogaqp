@@ -8,9 +8,9 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-
-      <%= cl_image_tag(@posts.first.imagen,:class =>"first-slide", :alt => "Sample Image")%>
-
+      <% if !@slider[1].blank? %>
+        <%= cl_image_tag(@slider[1].imagen,:class =>"first-slide", :alt => "Sample Image")%>
+      <% end %>
       <div class="container">
         <div class="carousel-caption text-left">
           <h1>Example headline.</h1>
@@ -22,7 +22,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+      <% if !@slider[2].blank? %>
+        <%= cl_image_tag(@slider[2].imagen,:class =>"second-slide", :alt => "Sample Image")%>
+      <% end %>
+      <!-- <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"> -->
       <div class="container">
         <div class="carousel-caption">
           <h1>Another example headline.</h1>
@@ -34,7 +37,10 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+      <% if !@slider[3].blank? %>
+        <%= cl_image_tag(@slider[3].imagen,:class =>"thrid-slide", :alt => "Sample Image")%>
+      <% end %>
+      <!-- <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"> -->
       <div class="container">
         <div class="carousel-caption text-right">
           <h1>One more for good measure.</h1>
@@ -110,7 +116,7 @@
             <div class="card-body">
               <h2 class="card-title"><%= post.title %></h2>
               <p class="card-text">
-                <% if !post.body.blank? %>  
+                <% if !post.body.blank? %>
                 <%=  truncate(post.body.html_safe, :length => 200, :omission => "" , :escape => false) %>
                 <% end %>
               </p>

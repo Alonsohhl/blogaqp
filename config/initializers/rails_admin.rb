@@ -9,11 +9,17 @@ RailsAdmin.config do |config|
   #end
 
   config.model Post do
+    field :title do
+        label "Titulo"
+      end
     edit do
       # For RailsAdmin >= 0.5.0
       field :title
       field :body, :ck_editor
       field :imagen
+      field :slider
+      field :fecha
+      field :fechafin
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true
