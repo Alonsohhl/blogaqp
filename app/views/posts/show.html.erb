@@ -1,4 +1,8 @@
 <% provide(:page_title,@post.title) %>
+<% title @post.title %>
+<% description 'Agenda de los mejores eventos, conciertos, eventos, museos, fiestas y diversión de Arequipa al dia a dia.'+@post.description %>
+<% keywords 'Arequipa, Conciertos, Fiestas, Diversion, Salidas, Donde ir, Que Hacer, A donde ' %>
+
 
 <div class="container">
   <p id="notice"><%= notice %></p>
@@ -17,7 +21,10 @@
           <hr>
 
           <!-- Date/Time -->
-          <p>a realizarse el <%= @post.fecha.strftime("%B") %></p>
+          <% if !@post.fecha.blank? %>
+            <p>a realizarse el <%= @post.fecha.strftime("%B") %></p>
+          <% end %>
+
           <p>Posted on January 1, 2017 at 12:00 PM</p>
 
           <hr>

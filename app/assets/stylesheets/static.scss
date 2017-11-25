@@ -4,6 +4,7 @@
 
 //font-family: 'Roboto Condensed', sans-serif;
  @import "bootstrap";
+ @import "font-awesome";
  /* GLOBAL STYLES
  -------------------------------------------------- */
  /* Padding below the footer and lighter body text */
@@ -226,4 +227,10 @@ align-items: center !important;
 }
 .footer{
   background: black;
+}
+
+.aqp-postfooter{
+  p{
+    font-size: 1.4rem !important;
+  }
 }

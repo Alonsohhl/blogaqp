@@ -43,7 +43,8 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'cloudinary'
 gem 'will_paginate', '~> 3.1.0'
-
+gem 'meta-tags'
+gem "font-awesome-rails"
 #gem bootstrap
 
 # Use Capistrano for deployment

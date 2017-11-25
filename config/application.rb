@@ -9,8 +9,8 @@ Bundler.require(*Rails.groups)
 module Blogaqp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-#    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-#    config.i18n.default_locale = :es
+    #config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    #config.i18n.default_locale = :es
     config.load_defaults 5.1
 
 

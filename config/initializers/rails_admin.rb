@@ -15,11 +15,13 @@ RailsAdmin.config do |config|
     edit do
       # For RailsAdmin >= 0.5.0
       field :title
+      field :description
       field :body, :ck_editor
       field :imagen
       field :slider
       field :fecha
       field :fechafin
+      field :catnomb
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true

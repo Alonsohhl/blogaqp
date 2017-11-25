@@ -1,5 +1,11 @@
-<% provide(:page_title,'Agenda de Eventos Arequipa') %>
+<% title 'Tos los Eventos Arequipa' %>
+<% description 'Agenda de los mejores eventos, conciertos, eventos, museos, fiestas y diversión de Arequipa al dia a dia.' %>
+<% keywords 'Arequipa, Conciertos, Fiestas, Diversion, Salidas, Donde ir, Que Hacer, A donde ' %>
 
+<% provide(:page_title,'Agenda de Eventos Arequipa') %>
+<%
+
+%>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -8,8 +14,8 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <% if !@slider[1].blank? %>
-        <%= cl_image_tag(@slider[1].imagen,:class =>"first-slide", :alt => "Sample Image")%>
+      <% if !@slider[0].blank? %>
+        <%= cl_image_tag(@slider[0].imagen,:class =>"first-slide", :alt => "Sample Image")%>
       <% end %>
       <div class="container">
         <div class="carousel-caption text-left">
@@ -22,13 +28,13 @@
       </div>
     </div>
     <div class="carousel-item">
-      <% if !@slider[2].blank? %>
-        <%= cl_image_tag(@slider[2].imagen,:class =>"second-slide", :alt => "Sample Image")%>
+      <% if !@slider[1].blank? %>
+        <%= cl_image_tag(@slider[1].imagen,:class =>"second-slide", :alt => "Sample Image")%>
       <% end %>
       <!-- <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide"> -->
       <div class="container">
         <div class="carousel-caption">
-          <h1>Another example headline.</h1>
+          <h1>Todos Los Eventos en Arequipa.</h1>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
           <p>
             <a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a>
@@ -37,8 +43,8 @@
       </div>
     </div>
     <div class="carousel-item">
-      <% if !@slider[3].blank? %>
-        <%= cl_image_tag(@slider[3].imagen,:class =>"thrid-slide", :alt => "Sample Image")%>
+      <% if !@slider[2].blank? %>
+        <%= cl_image_tag(@slider[2].imagen,:class =>"thrid-slide", :alt => "Sample Image")%>
       <% end %>
       <!-- <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide"> -->
       <div class="container">
@@ -125,7 +131,17 @@
               <!-- <a href=post class="btn btn-primary">Leer Mas &rarr;</a>
               <%= link_to 'Show', post %> -->
             </div>
-            <div class="card-footer text-muted">
+            <span class="listings_flag icon icon_pin">
+
+
+      </span>
+
+            <div class="card-footer aqp-postfooter">
+
+              <% if !post.fecha.blank? %>
+                <p> <i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i>  <%= post.fecha.day%>/<%= post.fecha.month%>/<%= post.fecha.year%>   </p>
+              <% end %>
+              
               Posted on January 1, 2017 by
               <a href="#">Blog Aqp</a>
             </div>
@@ -143,10 +159,10 @@
 
           <!-- Search Widget -->
           <div class="card my-4">
-            <h5 class="card-header">Search</h5>
+            <h5 class="card-header">Buscar</h5>
             <div class="card-body">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
+                <input type="text" class="form-control" placeholder="Buscar ...">
                 <span class="input-group-btn">
                   <button class="btn btn-secondary" type="button">Go!</button>
                 </span>
@@ -158,19 +174,19 @@
 
 
           <div class="card my-4">
-            <h5 class="card-header">Categories</h5>
+            <h5 class="card-header">Categorias</h5>
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-6">
                   <ul class="list-unstyled mb-0">
                     <li>
-                      <a href="#">Web Design</a>
+                      <a href="#">Conciertos</a>
                     </li>
                     <li>
-                      <a href="#">HTML</a>
+                      <a href="#">Cultura</a>
                     </li>
                     <li>
-                      <a href="#">Freebies</a>
+                      <a href="#">Educacion</a>
                     </li>
                   </ul>
                 </div>
