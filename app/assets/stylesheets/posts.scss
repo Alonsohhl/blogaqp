@@ -1,3 +1,21 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.image-r{
+  cursor: pointer;
+  overflow: hidden;
+  padding: 5px;
+
+  .captionn{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    color: white;
+    position: absolute; z-index: 1;
+    font-size: 40px;
+    opacity: 1;
+    font-weight: bold;
+
+}
+}

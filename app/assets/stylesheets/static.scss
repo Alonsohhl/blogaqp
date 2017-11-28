@@ -298,33 +298,67 @@ font-size: 12px;
  .top .top_list p:first-child {
     text-transform: uppercase;
     font-size: .7em;
-    font-family: "mono_bold";
     letter-spacing: 2px;
     text-shadow: 1px 1px rgba(0,0,0,.2);
+    font-family: 'Roboto Mono', monospace;
 }
-.top .top_list > span{
-  float:right;
-}
+// .top .top_list > span{
+//   float:right;
+// }
+//
+//
+//  .top .top_list p {
+//   line-height: .9;
+//   margin-left: 15px;
+//   font-weight: 700;
+//   font-size: 1.07em;
+//   letter-spacing: 0;
+//   margin-top: 15px;
+//   width: 70%;
+//   margin: 17px 0 0 3px!important;
+//   display: inline-block;
+//   color: black;}
+//
+.aqpleftside{
+    .imagediv{
 
 
- .top .top_list p {
-  line-height: .9;
-  margin-left: 15px;
-  font-weight: 700;
-  font-size: 1.07em;
-  letter-spacing: 0;
-  margin-top: 15px;
-  width: 70%;
-  margin: 17px 0 0 3px!important;
-  display: inline-block;
-  color: black;}
+      width: 65px;
+      height: 100%;
+      margin-top: 15px;
+      float: left;
+      .image{
+        margin: 0!important;
+        width: 58px;
+        height: 58px;
+        background-size: cover;
+      }
+    }
+    p {
+       line-height: .9;
+       margin-left: 15px;
+       font-weight: 700;
+       font-size: 1.07em;
+       letter-spacing: 0;
+       margin-top: 15px;
+       width: 70%;
+       margin: 0px 0 0 3px!important;
+       display: inline-block;
+       color: black;
+       margin-top: 0!important;
 
-
-  .aqpleftside{
-    .image{
-      width: 58px;
-      height: 58px;
-      background-size: cover;
-      margin: 0!important;
+    }
+        hr {
+        width: 83%;
+        float: right;
+        display: block;
+        margin: 0;
+        border: none;
+        height: 1px;
+        background: rgb(27,101,220);
+        background: -moz-linear-gradient(to right,#83CDF1 16%,#9285BB 32%,#EE9EC0 48%,#EF997B 64%,#FFF29C 80%,#8EC699 96%);
+        background: -webkit-linear-gradient(to right,#83CDF1 16%,#9285BB 32%,#EE9EC0 48%,#EF997B 64%,#FFF29C 80%,#8EC699 96%);
+        background: linear-gradient(to right,#83CDF1 16%,#9285BB 32%,#EE9EC0 48%,#EF997B 64%,#FFF29C 80%,#8EC699 96%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b65dc',endColorstr='#d96082',GradientType=1);
     }
   }
