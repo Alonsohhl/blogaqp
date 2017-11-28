@@ -136,8 +136,9 @@
 
 
       <div class="d-flex flex-row card-footer aqp-postfooter justify-content-center">
+        <% if !post.fecha.blank? %>
         <div class="p-0"><i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i><%= post.fecha.day%>/<%= post.fecha.month%>/<%= post.fecha.year%> </div>
-
+        <% end %>
       </div>
 
 
