@@ -21,11 +21,19 @@ RailsAdmin.config do |config|
       field :slider
       field :fecha
       field :fechafin
-      field :catnomb
+    #  field :nombre
+
+      field :categos
+  #    field :catego_nombres
       # For RailsAdmin < 0.5.0
       # field :description do
       #   ckeditor true
       # end
+    end
+  end
+  config.model Catego do
+    edit do
+      field :color, :color
     end
   end
 

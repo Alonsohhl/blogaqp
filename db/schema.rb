@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171125012815) do
+ActiveRecord::Schema.define(version: 20171125154322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 20171125012815) do
     t.string "catnomb"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categos", force: :cascade do |t|
+    t.string "nombre"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categos_posts", id: false, force: :cascade do |t|
+    t.integer "post_id"
+    t.integer "catego_id"
+    t.index ["catego_id"], name: "index_categos_posts_on_catego_id"
+    t.index ["post_id"], name: "index_categos_posts_on_post_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
