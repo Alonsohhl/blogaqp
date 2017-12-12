@@ -1,0 +1,137 @@
+
+
+
+.main-banner {
+
+    .post {
+
+
+        position: relative;
+        font-family: "Noto Sans", sans-serif;
+        .post-caption {
+            position: absolute;
+            // left: 0;
+            // right: 0;
+            // top: 0;
+            // bottom: 0;
+            // padding: 15px;
+            // text-align: left;
+            // z-index: 1;
+            // pointer-events: none;
+
+
+            .label{
+              text-transform: capitalize;
+              // font-size: 100%;
+              font-family: "Noto Serif";
+              font-style: italic;
+              font-weight: 700;
+              border-radius: 0;
+              padding: 0 6px;
+              transition: 0.2s ease-in;
+              background-color: #fff602;
+              font-size: 1.5em;
+            }
+            ul{
+              list-style-type: none;
+            }
+      }
+
+        .h1{
+          font-weight: 700 !important;
+          color: #fff !important;
+          display: inline-block;
+
+
+          & a:hover {
+            color: #ff0303;
+            text-decoration: none;
+          }
+          a{
+            color: #fff !important;
+
+          }
+        }
+        .h2{
+          font-weight: 350 !important;
+          color: #fff !important;
+          display: inline-block;
+
+          a{
+            color: #fff !important;
+
+          }
+        }
+
+    }
+
+
+}
+
+.shell {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 300px;
+  max-width: 480px;
+}
+
+
+@media (min-width: 320px) {
+  .post-caption .h1{
+    font-size: 16px;
+  }
+  .post-caption .h2{
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 480px) {
+  .post-caption .h1,.post-caption .h2{
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .shell {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .shell {
+    max-width: 970px;
+  }
+  .post-caption .h1{
+    font-size: 40px;
+  }
+  .post-caption .h2{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shell {
+    max-width: 1790px;
+  }
+  .post-caption .h1{
+    font-size: 40px;
+  }
+  .post-caption .h2{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1790px) {
+  .shell.shell-wide {
+    max-width: 1790px;
+  }
+  .post-caption .h1{
+    font-size: 50px;
+  }
+  .post-caption .h2{
+    font-size: 25px;
+  }
+
+}
