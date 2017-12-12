@@ -8,7 +8,7 @@
 <section class="main-banner pt-4 pb-5">
 <div class="shell">
 		<div class="row mx-auto">
-			<div class="col-sm-6">
+			<div class="col-md-6 p-1">
 				<div class="post d-flex">
 					<%= cl_image_tag(@slider[0].imagen,:class =>"img-fluid",:alt => @slider[0].title,:width=>860, :height=>662, :crop=>"crop")%>
 					<div class="post-caption d-flex flex-column h-100">
@@ -190,13 +190,11 @@
               <!-- <a href=post class="btn btn-primary">Leer Mas &rarr;</a>
               <%= link_to 'Show', post %> -->
             </div>
-
-
-      <div class="d-flex flex-row card-footer aqp-postfooter justify-content-center">
-        <% if !post.fecha.blank? %>
-        <div class="p-0"><i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i><%= post.fecha.day%>/<%= post.fecha.month%>/<%= post.fecha.year%> </div>
-        <% end %>
-      </div>
+			      <div class="d-flex flex-row card-footer aqp-postfooter justify-content-center">
+			        <% if !post.fecha.blank? %>
+			        <div class="p-0"><i class="fa fa-calendar-check-o fa-2x" aria-hidden="true"></i><%= post.fecha.day%>/<%= post.fecha.month%>/<%= post.fecha.year%> </div>
+			        <% end %>
+			      </div>
 
 
           </div>
@@ -211,29 +209,31 @@
 
         <div class="top col-md-4 col-lg-4 col-xs-5">
 
-            <div class="destacadosTop-title two">
-                <p class="">Top</p>
+            <div class="destacadosTop-title two my-4">
+                <p class="">TOP</p>
             </div>
             <div class="top_list">
-                        <ul>
-                          <a href="">
-                            <div class="d-flex flex-column aqpleftside">
-                                <div class="" style="">
-                                  <div class="imagediv">
-                                    <div class="image" style="background-image: url(&quot;https://cdn.playground.do/embed/88ce1e790085064635271f6448603f70d9530501510156247/problemas-no-comer-carne-11.jpg&quot;);    float: left;"></div>
-                                  </div>
-                                  <div class="" >
-                                    <p >Food AQP</p>
-                                    <p class="title_list">Eventos en Arequipa</p>
-                                  </div>
-                                  <div class="gradient_hr">
-                                    <hr size="5">
-                                  </div>
-                                </div>
-                              </div>
-                            </a>
 
-                        </ul>
+						<ul>
+							<% @sidebar.each do |sidebar| %>
+		          <a href="">
+		            <div class="d-flex flex-column aqpleftside">
+		                <div class="" style="">
+		                  <div class="imagediv py-2">
+												<%=cl_image_tag(sidebar.imagen, :height=>60, :width=>60, :crop=>"scale") %>
+		                  </div>
+		                  <div class="" >
+		                    <p >Food AQP</p>
+		                    <p class="title_list">Eventos en Arequipa</p>
+		                  </div>
+		                  <div class="gradient_hr">
+		                    <hr size="5">
+		                  </div>
+		                </div>
+		              </div>
+		            </a>
+								<% end %>
+              </ul>
                         <!-- <div class="top-list-button mono">
                             ver más
                         </div> -->

@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     #@slides = Post.all
     @slider = Post.where(:slider => true)
+    @sidebar = Post.where(:slider => true)
   #  @posts = Post.paginate(:page => params[:page], :per_page => 5)
     @posts = Post.search(params[:search]).paginate(:per_page => 5, :page => params[:page])
   end
@@ -13,6 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @sidebar = Post.where(:slider => true)
   end
 
   # GET /posts/new
