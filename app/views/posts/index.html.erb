@@ -3,7 +3,7 @@
 <% keywords 'Arequipa, Conciertos, Fiestas, Diversion, Salidas, Donde ir, Que Hacer, A donde ' %>
 
 <% provide(:page_title,'Agenda de Eventos Arequipa') %>
-<% if @slider.count>=2 %>
+<% if @slider.count>=4 %>
 
 <section class="main-banner pt-4 pb-5">
 <div class="shell">
@@ -98,14 +98,14 @@
 						</div>
 					</div>
 					<div class="post top-post col-md-6 p-1 d-flex">
-						<%= cl_image_tag(@slider[3].imagen,:class =>"img-fluid",:alt => @slider[3].title,:width=>426, :height=>327, :crop=>"crop")%>
+						<%= cl_image_tag(@slider[4].imagen,:class =>"img-fluid",:alt => @slider[4].title,:width=>426, :height=>327, :crop=>"crop")%>
 						<div class="post-caption d-flex flex-column h-100">
 		          <ul class="p-2">
 		            <li><a href="#"><span class="label label-warning">Eventos</span></a></li>
 		          </ul>
 							<div class="text-center mt-auto p-2">
 		            <div class="h2"><a href="post-default.html">
-									<%= @slider[3].title%>
+									<%= @slider[4].title%>
 										</a>
 								</div>
 		          </div>
