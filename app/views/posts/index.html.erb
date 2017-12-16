@@ -16,9 +16,11 @@
 	            <li><a href="#"><span class="label label-warning">Eventos</span></a></li>
 	          </ul>
 	          <div class="text-center mt-auto p-2">
-	            <div class="h1"><a href="post-default.html">
-								<%= @slider[0].title%>
-									</a>
+	            <div class="h1">
+								<%= link_to(@slider[0]) do %>
+								
+									<%= @slider[0].title%>
+								<% end %>
 							</div>
 	            <!-- <div class="post-meta post-meta-hidden-outer">
 	              <div class="post-meta-hidden">
