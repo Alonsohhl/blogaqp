@@ -1,4 +1,4 @@
-<% title 'Tos los Eventos Arequipa' %>
+<% title 'Todos los Eventos Arequipa Conciertos, fiestas, eventos y Cultura de AQP' %>
 <% description 'Agenda de los mejores eventos, conciertos, eventos, museos, fiestas y diversión de Arequipa al dia a dia.' %>
 <% keywords 'Arequipa, Conciertos, Fiestas, Diversion, Salidas, Donde ir, Que Hacer, A donde ' %>
 
@@ -216,24 +216,24 @@
 
 						<ul>
 							<% @sidebar.each do |sidebar| %>
-		          <a href="">
-		            <div class="d-flex flex-column aqpleftside">
-		                <div class="" style="">
-		                  <div class="imagediv py-2">
+								<%= link_to(sidebar) do%>
+									<div class="d-flex flex-column aqpleftside">
+										<div class="" style="">
+											<div class="imagediv py-2">
 												<%=cl_image_tag(sidebar.imagen, :height=>60, :width=>60, :crop=>"scale") %>
-		                  </div>
-		                  <div class="" >
-		                    <p >Food AQP</p>
-		                    <p class="title_list">Eventos en Arequipa</p>
-		                  </div>
-		                  <div class="gradient_hr">
-		                    <hr size="5">
-		                  </div>
-		                </div>
-		              </div>
-		            </a>
+											</div>
+											<div class="">
+												<p ><%= sidebar.title %></p>
+												<p class="title_list"><%= sidebar.description %></p>
+											</div>
+											<div class="gradient_hr">
+												<hr size="5">
+											</div>
+										</div>
+									</div>
 								<% end %>
-              </ul>
+							<% end %>
+						</ul>
                         <!-- <div class="top-list-button mono">
                             ver más
                         </div> -->
