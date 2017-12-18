@@ -40,6 +40,34 @@
 
 
         </div>
+        <div class="top col-md-12 col-lg-4">
+          <div class="destacadosTop-title two my-4">
+            <p class="">TOP</p>
+          </div>
+          <div class="top_list">
+
+            <ul>
+              <% @sidebar.each do |sidebar| %>
+              <%= link_to(sidebar) do%>
+              <div class="d-flex flex-column aqpleftside">
+                <div class="py-2" style="">
+                  <div class="imagediv">
+                    <%=cl_image_tag(sidebar.imagen, :height=>60, :width=>60, :crop=>"scale") %>
+                  </div>
+                  <div class="">
+                    <p ><%= sidebar.title %></p>
+                    <p class="title_list"><%= sidebar.description %></p>
+                  </div>
+                  <div class="gradient_hr">
+                    <hr size="5">
+                  </div>
+                </div>
+              </div>
+              <% end %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
   </div>
 </div>
 
